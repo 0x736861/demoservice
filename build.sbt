@@ -12,7 +12,7 @@ ThisBuild / libraryDependencies := Seq(
   "io.7mind.izumi"        %% "logstage-core"            % "1.0.10",
   "io.7mind.izumi"        %% "logstage-rendering-circe" % "1.0.10",
   "dev.zio"               %% "zio"                      % "1.0.14",
-  "com.github.pureconfig" %% "pureconfig"               % "0.17.1",
+  "com.github.pureconfig" %% "pureconfig"               % "0.16.0",
   "com.beachape"          %% "enumeratum"               % "1.7.0",
   "io.prometheus"          % "simpleclient"             % "0.11.0",
   "org.slf4j"              % "slf4j-api"                % "1.7.36",
