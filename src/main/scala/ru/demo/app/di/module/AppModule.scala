@@ -1,8 +1,9 @@
-package ru.pimpay.di.module
+package ru.demo.app.di.module
 
 import izumi.distage.model.definition.ModuleDef
 
 object AppModule extends ModuleDef {
+  include(LogModule)
   include(RepoModule)
   include(ServiceModule)
 }
