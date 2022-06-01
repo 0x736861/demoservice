@@ -8,7 +8,7 @@ import ru.demo.infra.doobie.DbTransactor
 import zio.ZIO
 
 trait OrderProcessor {
-  def processPendingOrders: AppIO[Int]
+  def processAllOrders: AppIO[Int]
 }
 
 object OrderProcessor {
@@ -21,7 +21,7 @@ object OrderProcessor {
       rabbitProducer: RabbitProducer,
   ) extends OrderProcessor {
 
-    def processPendingOrders: AppIO[Int] =
+    def processAllOrders: AppIO[Int] =
       for {
         _      <- logger.info("println processing pending orders")
         orders <- orderRepository.getAllOrders

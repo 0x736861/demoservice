@@ -11,7 +11,7 @@ object DemoService extends zio.App {
   def run(args: List[String]): URIO[zio.ZEnv, ExitCode] =
     Injector[Task]()
       .produceGet[OrderProcessor](AppModule, StandardAxis.prodActivation)
-      .use(_.processPendingOrders)
+      .use(_.processAllOrders)
       .exitCode
 
 }
